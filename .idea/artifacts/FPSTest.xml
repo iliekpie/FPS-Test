@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="FPSTest">
+    <output-path>$PROJECT_DIR$/out/artifacts/FPSTest</output-path>
+    <root id="archive" name="FPSTest.jar">
+      <element id="module-output" name="FPS Test" />
+      <element id="library" level="project" name="OpenGL Helpers" />
+    </root>
+  </artifact>
+</component>
