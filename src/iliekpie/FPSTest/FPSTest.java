@@ -4,7 +4,6 @@ import iliekpie.FPSTest.Entities.Cube;
 import iliekpie.FPSTest.Helpers.FPSCamera;
 import iliekpie.FPSTest.Helpers.FPSCameraController;
 import iliekpie.FPSTest.Helpers.FPSCounter;
-import iliekpie.FPSTest.Helpers.LogicManager;
 import iliekpie.OpenGLHelpers.MatrixUtils;
 import iliekpie.OpenGLHelpers.ShaderProgram;
 import org.lwjgl.LWJGLException;
@@ -38,8 +37,8 @@ public class FPSTest {
     //Projection-related variables
     private FPSCamera camera = null;
     private Matrix4f projectionMatrix = null;
-    private Matrix4f mvpMatrix = null;
-    private boolean dirty = true;
+    //private Matrix4f mvpMatrix = null;
+    //private boolean dirty = true;
 
     //Input
     private FPSCameraController controller = null;
@@ -96,7 +95,7 @@ public class FPSTest {
     }
 
     private void setupCubes() {
-        /*cubeArray = new Cube[1000];
+        cubeArray = new Cube[1000];
         for(int x=0; x<10; x++) {
             for(int y=0; y<10; y++) {
                 for(int z=0; z<10; z++) {
@@ -108,14 +107,14 @@ public class FPSTest {
                     cubeArray[x*100+y*10+z].bind(shaderProgram);
                 }
             }
-        }*/
-        cubeArray = new Cube[2];
+        }
+        /*cubeArray = new Cube[2];
         cubeArray[0] = new Cube(new Vector3f(0f, 0f, 0f));
         cubeArray[1] = new Cube(new Vector3f(2f, 0f, 0f));
 
         for (Cube cube : cubeArray) {
             cube.bind(shaderProgram);
-        }
+        }*/
     }
 
     private void setupShaders(){

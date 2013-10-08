@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="OpenGL Helpers">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../OpenGL Helpers/out/artifacts/OpenGL_Helpers_jar/OpenGL Helpers.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../OpenGL-Helpers/out/artifacts/OpenGL_Helpers_jar/OpenGL Helpers.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

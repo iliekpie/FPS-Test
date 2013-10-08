@@ -5,8 +5,6 @@ import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector2f;
 import org.lwjgl.util.vector.Vector3f;
 
-import java.util.Stack;
-
 public class FPSCamera {
     private Vector3f position = null;
     private float yaw = 0.0f;       //Yaw is the rotation around the Y axis AKA left/right
@@ -97,6 +95,6 @@ public class FPSCamera {
      * @return Matrix4f The view matrix
      */
     public Matrix4f getViewMatrix() {
-        return MatrixUtils.applyTranslations(position, new Vector3f(pitch, yaw, 0.0f));
+        return MatrixUtils.getWorldTransformationMatrix(position, new Vector3f(pitch, yaw, 0.0f));
     }
 }

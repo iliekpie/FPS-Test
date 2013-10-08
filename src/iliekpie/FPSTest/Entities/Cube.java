@@ -2,17 +2,9 @@ package iliekpie.FPSTest.Entities;
 
 import iliekpie.FPSTest.Helpers.Drawable;
 import iliekpie.OpenGLHelpers.MatrixUtils;
-import iliekpie.OpenGLHelpers.ShaderProgram;
 import iliekpie.OpenGLHelpers.Vertex;
-import org.lwjgl.BufferUtils;
-import org.lwjgl.opengl.GL11;
-import org.lwjgl.opengl.GL15;
-import org.lwjgl.opengl.GL20;
 import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector3f;
-
-import java.nio.ByteBuffer;
-import java.nio.FloatBuffer;
 
 public class Cube extends Drawable {
     //Position & Rotation
@@ -29,7 +21,7 @@ public class Cube extends Drawable {
         fillBuffers();
         position = initialPosition;
         rotation = initialRotation;
-        modelMatrix = MatrixUtils.applyTranslations(position, rotation);
+        modelMatrix = MatrixUtils.getLocalTransformationMatrix(position, rotation);
     }
 
     public Cube(Vector3f initialPosition) {
@@ -81,7 +73,7 @@ public class Cube extends Drawable {
      */
     public void tick() {
         dirty = true;
-        modelMatrix.rotate(0.05f, new Vector3f(0f, 1f, 0f));
+        //modelMatrix.rotate(0.05f, new Vector3f(0f, 1f, 0f));
         rotation.translate(0f, 0.05f, 0f);
         //System.out.println(position.toString() + "/" + rotation.toString());
     }
@@ -93,8 +85,9 @@ public class Cube extends Drawable {
     public Matrix4f getPositionMatrix() {
         if (!dirty) return modelMatrix;
         dirty = false;
-        MatrixUtils.dumpMatrixData("vecPos", MatrixUtils.applyTranslations(position, rotation));
+        modelMatrix = MatrixUtils.getLocalTransformationMatrix(position, rotation);
+        MatrixUtils.dumpMatrixData("vecPos", MatrixUtils.getLocalTransformationMatrix(position, rotation));
         MatrixUtils.dumpMatrixData("pos", modelMatrix);
-        return modelMatrix; //= MatrixUtils.applyTranslations(position, rotation);
+        return modelMatrix;
     }
 }
