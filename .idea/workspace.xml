@@ -6,19 +6,23 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec6c365c-5db9-472a-a3b7-ac65d797ff73" name="Default" comment="Changed the Cube class to rely on position/rotation vectors instead of directly modifying the matrix&#10;- has a great performance hit&#10;- relies on newer build of OpenGL Helpers">
+    <list default="true" id="ec6c365c-5db9-472a-a3b7-ac65d797ff73" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/iliekpie/FPSTest/Entities/Block.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/iliekpie/FPSTest/BlockType/BlockType.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Chunk.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/ChunkManager.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Mesh.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Renderer.java" />
+      <change type="DELETED" beforePath="H:\My Documents\GitHub\FPS-Test\src\iliekpie\FPSTest\Helpers\Sprite.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/iliekpie/FPSTest/Entities/Cube.java" afterPath="$PROJECT_DIR$/src/iliekpie/FPSTest/Entities/Cube.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/FPSCamera.java" afterPath="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/FPSCamera.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Drawable.java" afterPath="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Drawable.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/iliekpie/FPSTest/FPSTest.java" afterPath="$PROJECT_DIR$/src/iliekpie/FPSTest/FPSTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/FPSTest.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/FPSTest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/OpenGL_Helpers.xml" afterPath="$PROJECT_DIR$/.idea/libraries/OpenGL_Helpers.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="FPS Test.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/FPSTest.java" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1381250112201" ignored="false" />
-    <file path="/Cube.java" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1381250025405" ignored="false" />
+    <file path="/Cube.java" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1381250818701" ignored="false" />
     <file path="$PROJECT_DIR$/../OpenGL Helpers/src/iliekpie/OpenGLHelpers/MatrixUtils.java" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1380902890940" ignored="false" />
     <file path="/BasicProjection.vert" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1379000734606" ignored="false" />
     <file path="/BasicProjection.frag" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1370582235111" ignored="false" />
@@ -47,15 +51,25 @@
     <file path="$PROJECT_DIR$/.idea/misc.xml" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1378829469790" ignored="false" />
     <file path="$PROJECT_DIR$/../FPS TestSquare/src/iliekpie/FPSTestSquare/Helpers/Square.java" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1380038272448" ignored="false" />
     <file path="/Camera.java" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1380213535912" ignored="false" />
-    <file path="/Drawable.java" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1381248100379" ignored="false" />
+    <file path="/Drawable.java" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1381251991239" ignored="false" />
     <file path="/Sprite.java" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1380558585510" ignored="false" />
     <file path="/DisplayManager.java" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1380731234110" ignored="false" />
     <file path="/UpdateManager.java" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1380732851733" ignored="false" />
     <file path="/LogicManager.java" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1380732601259" ignored="false" />
     <file path="/FPSCameraController.java" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1380900853664" ignored="false" />
     <file path="/MatrixUtils.java" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1381249936002" ignored="false" />
-    <file path="/Dummy.txt" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1381250362855" ignored="false" />
+    <file path="/Dummy.txt" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1381419147850" ignored="false" />
     <file path="$PROJECT_DIR$/../OpenGL-Helpers/src/iliekpie/OpenGLHelpers/MatrixUtils.java" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1381249942273" ignored="false" />
+    <file path="$PROJECT_DIR$/../OpenGL-Helpers/.idea/workspace.xml" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1381250489960" ignored="false" />
+    <file path="/CubeManager.java" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1381251436074" ignored="false" />
+    <file path="/Block.java" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1381423065036" ignored="false" />
+    <file path="/BlockType.java" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1381423227484" ignored="false" />
+    <file path="/Color.java" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1381421048132" ignored="false" />
+    <file path="/Chunk.java" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1381424031167" ignored="false" />
+    <file path="/TestBlock.java" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1381422064743" ignored="false" />
+    <file path="/GameSettings.java" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1381422360193" ignored="false" />
+    <file path="/Renderer.java" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1381424052709" ignored="false" />
+    <file path="/Mesh.java" changelist="ec6c365c-5db9-472a-a3b7-ac65d797ff73" time="1381424654762" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,57 +133,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FPSTest.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="FPSTest.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/FPSTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="6" selection-start="1215" selection-end="1215" vertical-scroll-proportion="-3.6361868">
+            <state line="91" column="31" selection-start="2743" selection-end="2743" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cube.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Entities/Cube.java">
+      <file leaf-file-name="Chunk.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Chunk.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="41" selection-start="863" selection-end="863" vertical-scroll-proportion="0.0">
+            <state line="23" column="10" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mesh.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Mesh.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="41" selection-start="363" selection-end="363" vertical-scroll-proportion="0.33292535">
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#195#203#0" expanded="true" />
+                <element signature="e#253#259#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Drawable.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Drawable.java">
+      <file leaf-file-name="Renderer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Renderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="32" selection-start="515" selection-end="515" vertical-scroll-proportion="0.0">
+            <state line="2" column="23" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FPSCamera.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/FPSCamera.java">
+      <file leaf-file-name="ChunkManager.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/ChunkManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="36" selection-start="2328" selection-end="2328" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FPSCameraController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/FPSCameraController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="37" selection-start="745" selection-end="745" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Sprite.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Sprite.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="6" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0">
+            <state line="2" column="25" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -193,22 +200,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/Shaders/BasicProjection.frag" />
-        <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Logger.java" />
-        <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/FPSCounter.java" />
-        <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/VectorUtils.java" />
-        <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/Shaders/BasicProjection.vert" />
-        <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Camera.java" />
-        <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Cube.java" />
-        <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Sprite.java" />
-        <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/DisplayManager.java" />
-        <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/UpdateManager.java" />
-        <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/LogicManager.java" />
         <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/FPSCameraController.java" />
-        <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Drawable.java" />
-        <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/Entities/Cube.java" />
         <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/FPSCamera.java" />
+        <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/Entities/Cube.java" />
+        <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/CubeManager.java" />
+        <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Drawable.java" />
+        <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Color.java" />
         <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/FPSTest.java" />
+        <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/BlockType.java" />
+        <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/BlockType/DefaultBlock.java" />
+        <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/GameSettings.java" />
+        <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/BlockType/TestBlock.java" />
+        <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/Entities/Block.java" />
+        <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/BlockType/BlockType.java" />
+        <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Chunk.java" />
+        <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Renderer.java" />
+        <option value="$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Mesh.java" />
       </list>
     </option>
   </component>
@@ -274,6 +281,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -337,21 +345,64 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPS Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPS-Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPSTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPS Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPS-Test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FPSTest" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BlockType" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="115" />
-    <property name="project.structure.proportion" value="0.15" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="132" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="136" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="136" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../OpenGL-Helpers/out/artifacts/OpenGL_Helpers_jar/OpenGL Helpers.jar!/" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="139" />
@@ -366,8 +417,8 @@
     <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
@@ -375,8 +426,8 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -397,6 +448,19 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -424,19 +488,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -544,6 +595,11 @@
       <created>1370580192590</created>
       <updated>1370580192590</updated>
     </task>
+    <task id="LOCAL-00001" summary="Changed the Cube class to rely on position/rotation vectors instead of directly modifying the matrix&#10;- has a great performance hit&#10;- relies on newer build of OpenGL Helpers">
+      <created>1381250428274</created>
+      <updated>1381250428274</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -578,16 +634,16 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32858837" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977462" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3440095" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32977462" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16774717" sideWeight="0.6559905" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16774717" sideWeight="0.63345194" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36654803" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3440095" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32963374" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.67074525" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39955604" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -671,48 +727,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/FPSCameraController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="25" selection-start="2437" selection-end="2437" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/FPSCamera.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="40" selection-start="2650" selection-end="2650" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Sprite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="6" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/FPSTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Entities/Cube.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="13" selection-start="757" selection-end="757" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Shaders/BasicProjection.vert">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="24" selection-start="148" selection-end="148" vertical-scroll-proportion="0.33530572" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Shaders/BasicProjection.frag">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="17" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0" />
@@ -721,13 +735,6 @@
     <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/VectorUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="28" selection-start="283" selection-end="283" vertical-scroll-proportion="0.234714">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Sprite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="6" selection-start="80" selection-end="80" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -753,22 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Drawable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="32" selection-start="515" selection-end="515" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Entities/Cube.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="41" selection-start="863" selection-end="863" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/FPSCamera.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="79" column="36" selection-start="2328" selection-end="2328" vertical-scroll-proportion="0.0">
@@ -776,10 +767,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Drawable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="32" selection-start="2609" selection-end="2609" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Entities/Cube.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="34" selection-start="2303" selection-end="2303" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/BlockType/BlockType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="34" selection-start="125" selection-end="125" vertical-scroll-proportion="0.10403917">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Entities/Block.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="201" selection-end="201" vertical-scroll-proportion="0.22888617">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/ChunkManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="25" selection-start="60" selection-end="60" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Renderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="23" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Chunk.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="10" selection-start="586" selection-end="586" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/FPSTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="6" selection-start="1215" selection-end="1215" vertical-scroll-proportion="-3.6361868">
+        <state line="91" column="31" selection-start="2743" selection-end="2743" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iliekpie/FPSTest/Helpers/Mesh.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="41" selection-start="363" selection-end="363" vertical-scroll-proportion="0.33292535">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#195#203#0" expanded="true" />
+            <element signature="e#253#259#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

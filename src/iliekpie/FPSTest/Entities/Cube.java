@@ -8,8 +8,7 @@ import org.lwjgl.util.vector.Vector3f;
 
 public class Cube extends Drawable {
     //Position & Rotation
-    private Vector3f position = null;
-    private Vector3f rotation = null;
+    //TODO: use matrix for position and quaternion for orientation?
 
     private Matrix4f modelMatrix = new Matrix4f();
     private boolean dirty = true;
@@ -19,9 +18,7 @@ public class Cube extends Drawable {
      */
     public Cube(Vector3f initialPosition, Vector3f initialRotation) {
         fillBuffers();
-        position = initialPosition;
-        rotation = initialRotation;
-        modelMatrix = MatrixUtils.getLocalTransformationMatrix(position, rotation);
+        modelMatrix = MatrixUtils.getLocalTransformationMatrix(initialPosition, initialRotation);
     }
 
     public Cube(Vector3f initialPosition) {
@@ -73,8 +70,8 @@ public class Cube extends Drawable {
      */
     public void tick() {
         dirty = true;
-        //modelMatrix.rotate(0.05f, new Vector3f(0f, 1f, 0f));
-        rotation.translate(0f, 0.05f, 0f);
+        modelMatrix.rotate(0.05f, new Vector3f(0f, 1f, 0f));
+
         //System.out.println(position.toString() + "/" + rotation.toString());
     }
 
@@ -85,9 +82,7 @@ public class Cube extends Drawable {
     public Matrix4f getPositionMatrix() {
         if (!dirty) return modelMatrix;
         dirty = false;
-        modelMatrix = MatrixUtils.getLocalTransformationMatrix(position, rotation);
-        MatrixUtils.dumpMatrixData("vecPos", MatrixUtils.getLocalTransformationMatrix(position, rotation));
-        MatrixUtils.dumpMatrixData("pos", modelMatrix);
+        //modelMatrix = MatrixUtils.getLocalTransformationMatrix(position, rotation);
         return modelMatrix;
     }
 }

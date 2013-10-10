@@ -29,19 +29,14 @@ public class FPSTest {
     private static final float fov = 79.0f;
 
     //Shader-related variables
-    private ShaderProgram shaderProgram = null;
-
-    //Entities
-    private Cube[] cubeArray = null;
+    private ShaderProgram shaderProgram;
 
     //Projection-related variables
-    private FPSCamera camera = null;
-    private Matrix4f projectionMatrix = null;
-    //private Matrix4f mvpMatrix = null;
-    //private boolean dirty = true;
+    private FPSCamera camera;
+    private Matrix4f projectionMatrix;
 
     //Input
-    private FPSCameraController controller = null;
+    private FPSCameraController controller;
 
     public FPSTest() {
         setupOpenGL();
@@ -95,26 +90,6 @@ public class FPSTest {
     }
 
     private void setupCubes() {
-        cubeArray = new Cube[1000];
-        for(int x=0; x<10; x++) {
-            for(int y=0; y<10; y++) {
-                for(int z=0; z<10; z++) {
-                    cubeArray[x*100+y*10+z] = new Cube(new Vector3f(
-                            (x-5)*2,
-                            (y-5)*2,
-                            (z-5)*2
-                    ));
-                    cubeArray[x*100+y*10+z].bind(shaderProgram);
-                }
-            }
-        }
-        /*cubeArray = new Cube[2];
-        cubeArray[0] = new Cube(new Vector3f(0f, 0f, 0f));
-        cubeArray[1] = new Cube(new Vector3f(2f, 0f, 0f));
-
-        for (Cube cube : cubeArray) {
-            cube.bind(shaderProgram);
-        }*/
     }
 
     private void setupShaders(){
