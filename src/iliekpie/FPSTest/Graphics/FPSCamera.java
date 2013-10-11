@@ -1,5 +1,6 @@
-package iliekpie.FPSTest.Helpers;
+package iliekpie.FPSTest.Graphics;
 
+import iliekpie.OpenGLHelpers.VectorUtils;
 import iliekpie.OpenGLHelpers.MatrixUtils;
 import org.lwjgl.util.vector.Matrix4f;
 import org.lwjgl.util.vector.Vector2f;

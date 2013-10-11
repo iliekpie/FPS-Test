@@ -1,21 +1,24 @@
 package iliekpie.FPSTest.Helpers;
 
+import iliekpie.FPSTest.Graphics.FPSCamera;
 import org.lwjgl.Sys;
 import org.lwjgl.input.Keyboard;
 import org.lwjgl.input.Mouse;
 import org.lwjgl.opengl.Display;
+import org.lwjgl.opengl.GL11;
 
 public class FPSCameraController {
     private long lastTime = 0L;
     private FPSCamera camera = null;
     private boolean inverted = false;
 
+    private boolean wireframe = false;
+
     /**
      * Create a controller for a First Person camera
      * Allows input (Keyboard and Mouse)
      */
     public FPSCameraController() {
-        Keyboard.enableRepeatEvents(true);
     }
 
     /**
@@ -80,28 +83,33 @@ public class FPSCameraController {
         final float runModifier = 2.0f;
         float distance = getDeltaTime() * movementSpeed;
 
-        //buffered vs. unbuffered input
-        //while (Keyboard.next()) {
-            if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) {
-                //Move faster.
-                distance *= runModifier;
+        //unbuffered input
+        if (Keyboard.isKeyDown(Keyboard.KEY_LSHIFT)) {
+            //Move faster.
+            distance *= runModifier;
+        }
+        if (Keyboard.isKeyDown(Keyboard.KEY_W)) {
+            camera.moveForward(distance);
+        }
+        if (Keyboard.isKeyDown(Keyboard.KEY_S)) {
+            camera.moveBackward(distance);
+        }
+        if (Keyboard.isKeyDown(Keyboard.KEY_A)) {
+            camera.moveLeft(distance);
+        }
+        if (Keyboard.isKeyDown(Keyboard.KEY_D)) {
+            camera.moveRight(distance);
+        }
+        if (Keyboard.isKeyDown(Keyboard.KEY_LCONTROL)) {
+            Mouse.setGrabbed(!Mouse.isGrabbed());
+        }
+
+        if(Keyboard.next()) {
+            if (Keyboard.isKeyDown(Keyboard.KEY_Q)) {
+                wireframe = !wireframe;
+                GL11.glPolygonMode(GL11.GL_FRONT_AND_BACK, (wireframe) ? GL11.GL_LINE : GL11.GL_FILL);
             }
-            if (Keyboard.isKeyDown(Keyboard.KEY_W)) {
-                camera.moveForward(distance);
-            }
-            if (Keyboard.isKeyDown(Keyboard.KEY_S)) {
-                camera.moveBackward(distance);
-            }
-            if (Keyboard.isKeyDown(Keyboard.KEY_A)) {
-                camera.moveLeft(distance);
-            }
-            if (Keyboard.isKeyDown(Keyboard.KEY_D)) {
-                camera.moveRight(distance);
-            }
-            if (Keyboard.isKeyDown(Keyboard.KEY_LCONTROL)) {
-                Mouse.setGrabbed(!Mouse.isGrabbed());
-            }
-        //}
+        }
     }
 
     //Timer functions for frame-independent movement

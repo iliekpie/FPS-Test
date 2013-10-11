@@ -1,9 +1,9 @@
 package iliekpie.FPSTest.Entities;
 
-import iliekpie.FPSTest.BlockType.BlockType;
-
 public class Block {
-    private BlockType blockType;
+    public static final float RENDER_SIZE = 0.5f;
+
+    private BlockType blockType = BlockType.AIR;
     private boolean active = false;
 
     public Block() {

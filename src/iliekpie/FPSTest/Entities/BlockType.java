@@ -1,10 +1,10 @@
-package iliekpie.FPSTest.BlockType;
+package iliekpie.FPSTest.Entities;
 
-import org.lwjgl.util.Color;
+import iliekpie.OpenGLHelpers.Color;
 
 public enum BlockType {
-    TEST(1, new Color(128, 0, 0));
-
+    AIR(0, new Color(0.0f, 0.0f, 0.0f, 0.0f)),
+    TEST(1, new Color(0, 128, 64));
 
     private int id;
     private Color color;

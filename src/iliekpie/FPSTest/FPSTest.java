@@ -1,9 +1,10 @@
 package iliekpie.FPSTest;
 
-import iliekpie.FPSTest.Entities.Cube;
-import iliekpie.FPSTest.Helpers.FPSCamera;
-import iliekpie.FPSTest.Helpers.FPSCameraController;
-import iliekpie.FPSTest.Helpers.FPSCounter;
+import iliekpie.FPSTest.Graphics.ChunkRenderer;
+import iliekpie.FPSTest.Graphics.FPSCamera;
+import iliekpie.FPSTest.Helpers.*;
+import iliekpie.FPSTest.World.Chunk;
+import iliekpie.FPSTest.World.ChunkManager;
 import iliekpie.OpenGLHelpers.MatrixUtils;
 import iliekpie.OpenGLHelpers.ShaderProgram;
 import org.lwjgl.LWJGLException;
@@ -38,11 +39,13 @@ public class FPSTest {
     //Input
     private FPSCameraController controller;
 
+    private ChunkManager chunkManager;
+
     public FPSTest() {
         setupOpenGL();
         setupShaders();
         setupProjection();
-        setupCubes();
+        setupWorld();
         setupInput();
 
         while (!Display.isCloseRequested() && !Keyboard.isKeyDown(Keyboard.KEY_ESCAPE)) {
@@ -65,13 +68,13 @@ public class FPSTest {
         //Setup an OpenGL context of version 3.2
         try {
             PixelFormat pixelFormat = new PixelFormat();
-            ContextAttribs contextAttribs = new ContextAttribs(3, 1); //temp fix for hardware limitation: need to update drivers
-            /*        .withForwardCompatible(true)
-                    .withProfileCore(true);*/
+            ContextAttribs contextAttribs = new ContextAttribs(3, 2) //temp fix for hardware limitation: need to update drivers
+                    .withForwardCompatible(true)
+                    .withProfileCore(true);
 
             Display.setDisplayMode(new DisplayMode(WIDTH, HEIGHT));
             Display.setTitle(WINDOW_TITLE);
-            Display.setVSyncEnabled(true);
+            //Display.setVSyncEnabled(true);
             Display.setResizable(true);
             Display.create(pixelFormat, contextAttribs);
 
@@ -89,7 +92,10 @@ public class FPSTest {
         GL11.glEnable(GL11.GL_DEPTH_TEST);
     }
 
-    private void setupCubes() {
+    private void setupWorld() {
+        chunkManager = new ChunkManager();
+        chunkManager.populateChunkList(16);
+        chunkManager.bindRenderers(shaderProgram);
     }
 
     private void setupShaders(){
@@ -103,8 +109,8 @@ public class FPSTest {
 
         try {
             shaderProgram = new ShaderProgram(
-                    "src/iliekpie/FPSTest/Shaders/BasicProjection.vert",
-                    "src/iliekpie/FPSTest/Shaders/BasicProjection.frag",
+                    "src/iliekpie/FPSTest/Graphics/Shaders/BasicProjection.vert",
+                    "src/iliekpie/FPSTest/Graphics/Shaders/BasicProjection.frag",
                     attributes
             );
         } catch (LWJGLException e) {
@@ -115,8 +121,8 @@ public class FPSTest {
 
     private void setupProjection() {
         //projectionMatrix = MatrixUtils.getPerspectiveMatrix(fov, (float) (WIDTH / HEIGHT), 0.1f, 100.0f);
-        camera = new FPSCamera(new Vector3f(0.5f, 0.5f, 2.0f));
-
+        //camera = new FPSCamera(new Vector3f(0.5f, 0.5f, 2.0f));
+        camera = new FPSCamera(new Vector3f(0.5f, 0.5f, -1.0f));
         Mouse.setGrabbed(true);
     }
 
@@ -138,15 +144,13 @@ public class FPSTest {
         //Set the shader program as the currently used one.
         shaderProgram.use();
 
-        for(Cube cube : cubeArray) {
-            //Uniforms have to be set after the program is set - maybe use a queue or stack?
-            shaderProgram.setUniformMatrix(
-                    shaderProgram.getUniformLocation("MVP"),
-                    false,
-                    MatrixUtils.multiplyMVP(cube.getPositionMatrix(), camera.getViewMatrix(), projectionMatrix)
-            );
-            cube.draw();
-        }
+        /*shaderProgram.setUniformMatrix(
+                shaderProgram.getUniformLocation("MVP"),
+                false,
+                MatrixUtils.multiplyMVP(MatrixUtils.getLocalTransformationMatrix(new Vector3f(0.0f, 0.0f, 16.0f), new Vector3f()), camera.getViewMatrix(), projectionMatrix)
+        );*/
+
+        chunkManager.renderChunks(camera.getViewMatrix(), projectionMatrix);
 
         //Reset everything (deselect)
         shaderProgram.disable();
@@ -155,19 +159,14 @@ public class FPSTest {
     private void logicCycle() {
         controller.handleInput();
 
-        for(Cube cube : cubeArray) {
-            cube.tick();
-        }
-
         //Create a new MVP matrix in case of movement - check if dirty before changing?
         //mvpMatrix = MatrixUtils.multiplyMVP(, camera.getViewMatrix(), projectionMatrix);
     }
 
     private void destroyOpenGL(){
         //Delete the shader program and models
-        for(Cube cube : cubeArray) {
-            cube.destroy();
-        }
+        chunkManager.destroy();
+
         shaderProgram.destroy();
 
         Display.destroy();
